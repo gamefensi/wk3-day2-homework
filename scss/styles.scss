@@ -1,0 +1,80 @@
+@import 'colors';
+
+%center-text {
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+%center-content {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+}
+
+%ht100PosRel {
+	position: relative;
+	height: 100%;
+}
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
+}
+
+//Global
+* {
+	color: $white;
+	font-size: 1.2rem;
+}
+
+.container {
+	background-color: $yellow;
+	border: 1px solid #000;
+	display: flex;
+	height: 500px;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 1em;
+	width: 50%;
+
+	.left {
+		background-color: $green;
+		@extend %ht100PosRel;
+		width: 69%;
+
+		p {
+			@extend %center-text;
+			@extend %center-content;
+			@include transform(translate(-50%, -350%));
+		}
+	}
+
+	.right {
+		background-color: $light;
+		@extend %ht100PosRel;
+		width: 29%;
+
+		p {
+			@extend %center-text;
+			@extend %center-content;
+			@include transform(translate(-50%, -500%));
+		}
+		.button {
+			background-color: $vividYellow;
+			color: $green;
+			border: 0;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 7em;
+			height: 2.5em;
+			font-size: 1rem;
+			font-weight: bold;
+			padding: 0.5em 2em;
+
+			//this is to center content vertically
+			@extend %center-content;
+			@include transform(translate(-50%, -120%));
+		}
+	}
+}

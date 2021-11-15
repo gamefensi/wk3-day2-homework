@@ -1,0 +1,55 @@
+.container .left p, .container .right p {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto; }
+
+.container .left p, .container .right p, .container .right .button {
+  position: absolute;
+  top: 100%;
+  left: 50%; }
+
+.container .left, .container .right {
+  position: relative;
+  height: 100%; }
+
+* {
+  color: #fff;
+  font-size: 1.2rem; }
+
+.container {
+  background-color: #f7eb80;
+  border: 1px solid #000;
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1em;
+  width: 50%; }
+  .container .left {
+    background-color: #637a5b;
+    width: 69%; }
+    .container .left p {
+      -webkit-transform: translate(-50%, -350%);
+      -ms-transform: translate(-50%, -350%);
+      transform: translate(-50%, -350%); }
+  .container .right {
+    background-color: #a6ad80;
+    width: 29%; }
+    .container .right p {
+      -webkit-transform: translate(-50%, -500%);
+      -ms-transform: translate(-50%, -500%);
+      transform: translate(-50%, -500%); }
+    .container .right .button {
+      background-color: #dcf829;
+      color: #637a5b;
+      border: 0;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 7em;
+      height: 2.5em;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.5em 2em;
+      -webkit-transform: translate(-50%, -120%);
+      -ms-transform: translate(-50%, -120%);
+      transform: translate(-50%, -120%); }
